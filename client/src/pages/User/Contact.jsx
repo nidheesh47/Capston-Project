@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 const ContactPage = () => {
   const navigate = useNavigate();
   const [contactInfo, setContactInfo] = useState({
-    name: "Rohin Pramod",
+    name: "name",
     email: "user@example.com",
     phone: "123-456-7890",
     address: "123 Main Street, Anytown, USA",
@@ -38,8 +38,10 @@ const ContactPage = () => {
 
   return (
     <div className="max-w-4xl mx-auto mt-10 p-6 bg-white shadow-lg rounded-lg">
-      <h1 className="text-2xl font-semibold mb-6 text-center">Contact Information</h1>
-      
+      <h1 className="text-2xl font-semibold mb-6 text-center">
+        Contact Information
+      </h1>
+
       {/* Name Section */}
       <div className="mb-4">
         <label className="block text-gray-700 font-medium">Name</label>
@@ -126,14 +128,13 @@ const ContactPage = () => {
       {/* Save Button */}
       <div className="mt-6 text-center">
         <Link to="/user-profile">
-        <button
-          onClick={handleSave}
-          className="px-6 py-2 text-white bg-orange-400 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200"
-        >
-          Save
-        </button>
+          <button
+            onClick={handleSave}
+            className="px-6 py-2 text-white bg-orange-400 rounded-md shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-200"
+          >
+            Save
+          </button>
         </Link>
-        
       </div>
     </div>
   );
